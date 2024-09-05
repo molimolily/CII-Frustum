@@ -45,7 +45,7 @@ public class CIIVisualizer : MonoBehaviour
         {
             foreach (var group in rowGroup)
             {
-                foreach (var rowElements in group.Elements)
+                foreach (var rowElements in group.elements)
                 {
                     foreach (var element in rowElements)
                     {
@@ -87,8 +87,8 @@ public class CIIVisualizer : MonoBehaviour
 
                 // Draw Group Frustum
                 Gizmos.color = new Color(Color.magenta.r, Color.magenta.g, Color.magenta.b, 0.2f);
-                Frustum groupFrustum = group.GroupFrustum;
-                Vector3 apex = group.FrustumApex;
+                Frustum groupFrustum = group.groupFrustum;
+                Vector3 apex = group.frustumApex;
                 GizmoUtil.DrawFrustum(groupFrustum, transform, apex);
             }
         }
